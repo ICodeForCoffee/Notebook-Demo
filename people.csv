@@ -1,4 +1,4 @@
-Id,FirstName,LastName,DataOfBirth,Guid
+Id,FirstName,LastName,Gender,DataOfBirth,GUID
 73260,Evelyn,Perry,Female,10/23/1930,634429e0-c09c-4959-9ad5-2afc4451072d
 38376,Quinn,Kelly,Female,11/15/1957,4a6ec6b7-1f83-4978-aa4c-39ff14bdd063
 44701,Jeremiah,Gray,Male,4/30/1999,ffccedbf-223b-40d2-828e-888bcd1b1183
