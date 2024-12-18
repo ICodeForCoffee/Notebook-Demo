@@ -1,0 +1,61 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+Let's flip some coins in C#
+
+#!csharp
+
+var random = new Random();
+int total = 0;
+int runCount =100000;
+for(int i = 0; i < runCount; i++)
+{
+    var number = random.Next(2);
+    if ( runCount <= 10) {
+        Console.WriteLine(number);
+    }
+    total += number;
+}
+
+var average = (float) total/runCount;
+Console.WriteLine($"That average is {average}");
+
+#!markdown
+
+Hey **JavaScript** how many times did we flip the coin?
+
+#!javascript
+
+#!set --value @csharp:runCount --name count
+console.log(count);
+
+#!markdown
+
+What if we want to do this using the Cryptographically Secure Random number Generator in C#?
+
+#!csharp
+
+total = 0;
+for(int i = 0; i < runCount; i++)
+{
+    int number =  System.Security.Cryptography.RandomNumberGenerator.GetInt32(2);
+    if ( runCount <= 10) {
+        Console.WriteLine(number);
+    }
+    total += number;
+}
+
+#!markdown
+
+Let's have JavaScript display this all for us.
+
+#!javascript
+
+#!set --value @csharp:total --name total
+
+average = total/count;
+console.log('The average was ' + average);
+console.log('This was achieved over ' + count.toLocaleString() + ' runs')
